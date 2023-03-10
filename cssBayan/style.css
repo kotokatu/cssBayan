@@ -16,16 +16,19 @@ body {
   margin: 0 auto;
 }
 
-.meme-container {
-
-}
-
 .meme-item {
   display: block;
   cursor: pointer;
   border-bottom: 0.1rem solid #00000009;
 }
 
+.meme-item:active{
+  opacity: 0.6;
+}
+
+.meme-item:active .meme-title {
+  color: blue;
+}
 
 .meme-title {
   display: flex;
@@ -52,7 +55,7 @@ body {
   max-height: 0;
   margin: 0 auto;
   opacity: 0;
-  transition: max-width .3s, max-height .3s, opacity .7s ease-in;
+  transition: max-width .3s, max-height .3s, opacity .6s ease-in;
 }
 
 .meme-radio {
@@ -73,7 +76,7 @@ body {
 }
 
 .meme-radio:not(:checked) ~ .meme-title {
-  color: blue;
+  color: #0000ff;
 }
 
 @media (hover: hover) {
@@ -99,4 +102,16 @@ body {
     opacity: 1;
   }
 
+}
+
+.meme-item:active{
+  opacity: 0.6;
+}
+
+.meme-item:active .meme-title {
+  color: blue;
+}
+
+.meme-item:active .meme-icon {
+  background-image: url("svg/cross_blue.svg");
 }
