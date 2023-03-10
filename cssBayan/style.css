@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* -webkit-tap-highlight-color: transparent; */
+}
+
+.memes {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.meme-item {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+}
+
+.meme-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+
+.meme-icon {
+  height: 1.3rem;
+  width: 1.3rem;
+  background-image: url("svg/cross.svg");
+  transform: rotate(45deg);
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: .1s;
+}
+
+.meme-img {
+  display: block;
+  max-width: 0;
+  max-height: 0;
+  margin: 0 auto;
+  padding: 1rem 0;
+  transition: .3s;
+}
+
+.meme-radio {
+  display: none;
+}
+
+.meme-radio:checked ~ .meme-img {
+  max-width: 50%;
+  max-height: 50vh;
+}
+
+.meme-radio:checked ~ .meme-title > .meme-icon {
+  transform: rotate(0);
+}
