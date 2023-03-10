@@ -1,8 +1,9 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  /* -webkit-tap-highlight-color: transparent; */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .memes {
@@ -10,16 +11,12 @@
   margin: 0 auto;
 }
 
-.meme-item {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-}
 
 .meme-title {
   display: flex;
   justify-content: space-between;
   font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .meme-icon {
@@ -53,4 +50,6 @@
 
 .meme-radio:checked ~ .meme-title > .meme-icon {
   transform: rotate(0);
+  height: 1.4rem;
+  width: 1.4rem;
 }
