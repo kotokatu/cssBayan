@@ -136,16 +136,16 @@ h1 {
 @media (min-width: 768px) {
 
   body {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
 }
 
 @media (min-width: 1024px) {
 
-    body {
-      font-size: 2rem;
-    }
+  body {
+    font-size: 2rem;
+  }
 
   .memes {
     max-width: 50%;
