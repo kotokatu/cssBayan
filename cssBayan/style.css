@@ -18,7 +18,7 @@ h1 {
 }
 
 .memes {
-  max-width: 70%;
+  max-width: 85%;
   margin: 0 auto;
 }
 
@@ -71,7 +71,7 @@ h1 {
 }
 
 .meme-radio:checked ~ .meme-img {
-  max-width: 70%;
+  max-width: 50%;
   padding: 1em 0;
   opacity: 1;
 }
@@ -109,7 +109,7 @@ h1 {
   }
 
   .meme-item:hover .meme-img {
-    max-width: 70%;
+    max-width: 50%;
     padding: 1em 0;
     opacity: 1;
   }
@@ -141,6 +141,10 @@ h1 {
 
   body {
     font-size: 1.5rem;
+  }
+
+  .memes {
+    max-width: 70%;
   }
 
 }
