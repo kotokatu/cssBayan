@@ -51,7 +51,7 @@ h1 {
   height: 1.3em;
   width: 1.3em;
   transform: rotate(45deg);
-  background-image: url("svg/cross.svg");
+  background-image: url("svg/cross_blue.svg");
   background-position: center center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -79,6 +79,7 @@ h1 {
 }
 
 .meme-radio:checked ~ .meme-title > .meme-icon {
+  background-image: url("svg/cross.svg");
   transform: rotate(0);
   height: 1.4em;
   width: 1.4em;
@@ -96,6 +97,7 @@ h1 {
 
   .meme-container:hover .meme-icon {
     opacity: 1;
+    background-image: url("svg/cross.svg");
   }
 
   .meme-container:hover .meme-title {
@@ -125,7 +127,8 @@ h1 {
   color: blue;
 }
 
-.meme-item:active .meme-icon {
+.meme-item:active .meme-icon,
+.meme-item:active .meme-radio:checked ~ .meme-title > .meme-icon {
   background-image: url("svg/cross_blue.svg");
 }
 
