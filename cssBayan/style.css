@@ -143,11 +143,16 @@ h1 {
 
 @media (min-width: 1024px) {
 
-  .meme-icon {
-    opacity: 0;
+    body {
+      font-size: 2rem;
+    }
+
+  .memes {
+    max-width: 50%;
+    margin: 0 auto;
   }
 
-  body {
-    font-size: 2rem;
+  .meme-icon {
+    opacity: 0;
   }
 }
