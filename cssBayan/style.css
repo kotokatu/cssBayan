@@ -90,6 +90,10 @@ h1 {
 
 @media (hover: hover) {
 
+  .meme-icon {
+    opacity: 0;
+  }
+
   .meme-container:hover .meme-icon {
     opacity: 1;
   }
@@ -152,7 +156,4 @@ h1 {
     margin: 0 auto;
   }
 
-  .meme-icon {
-    opacity: 0;
-  }
 }
