@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin-top: 2rem;
+  font-size: 1.2em;
+}
+
+.memes {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.meme-item {
+  display: block;
+  cursor: pointer;
+  border-bottom: 0.1rem solid #00000009;
+}
+
+.meme-item:active{
+  opacity: 0.6;
+}
+
+.meme-item:active .meme-title {
+  color: blue;
+}
+
+.meme-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5em;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 1em 0;
+  transition: .3s;
+}
+
+.meme-icon {
+  flex-shrink: 0;
+  height: 1.3em;
+  width: 1.3em;
+  transform: rotate(45deg);
+  background-image: url("svg/cross_blue.svg");
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: .1s;
+}
+
+.meme-img {
+  display: block;
+  max-width: 0;
+  margin: 0 auto;
+  opacity: 0;
+  transition: max-width .3s, max-height .3s, opacity .6s ease-in;
+}
+
+.meme-radio {
+  display: none;
+}
+
+.meme-radio:checked ~ .meme-img {
+  max-width: 50%;
+  padding: 1em 0;
+  opacity: 1;
+}
+
+.meme-radio:checked ~ .meme-title > .meme-icon {
+  background-image: url("svg/cross.svg");
+  transform: rotate(0);
+  height: 1.4em;
+  width: 1.4em;
+}
+
+.meme-radio:not(:checked) ~ .meme-title {
+  color: #0000ff;
+}
+
+@media (hover: hover) {
+
+  .meme-icon {
+    opacity: 0;
+  }
+
+  .meme-container:hover .meme-icon {
+    opacity: 1;
+    background-image: url("svg/cross.svg");
+  }
+
+  .meme-container:hover .meme-title {
+    color: black;
+  }
+
+  .meme-item:hover .meme-icon {
+    transform: rotate(0);
+    height: 1.4em;
+    width: 1.4em;
+  }
+
+  .meme-item:hover .meme-img {
+    max-width: 50%;
+    padding: 1em 0;
+    opacity: 1;
+  }
+
+}
+
+.meme-item:active{
+  opacity: 0.6;
+}
+
+.meme-item:active .meme-title {
+  color: blue;
+}
+
+.meme-item:active .meme-icon,
+.meme-item:active .meme-radio:checked ~ .meme-title > .meme-icon {
+  background-image: url("svg/cross_blue.svg");
+}
+
+@media (min-width: 320px) {
+
+  body {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  body {
+    font-size: 1.5rem;
+  }
+
+  .memes {
+    max-width: 70%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  body {
+    font-size: 2rem;
+  }
+
+  .memes {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+}
