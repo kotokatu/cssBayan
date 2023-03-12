@@ -10,7 +10,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
 }
 
 h1 {
@@ -126,12 +125,19 @@ h1 {
   background-image: url("svg/cross_blue.svg");
 }
 
-@media (min-width: 820px) {
+@media (min-width: 320px) {
+
+  body {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 768px) {
 
   body {
     font-size: 1.3rem;
   }
-
 
 }
 
@@ -142,6 +148,6 @@ h1 {
   }
 
   body {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 }
